@@ -46,7 +46,8 @@
 <a id="calendar-date-to-tng-stardate" class="anchor" href="#calendar-date-to-tng-stardate" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Calendar date to TNG Stardate</h3>
 
 <form name="computeTngStardate">
-    <input id="datetimeInputTng" name="datetime" type="text">
+    <input id="datetimeInputTng" name="datetime" type="text" onChange="calendarDateToStardateTng(year, month, day, hour, minute)">
+	<input name="stardateOut" type="text">
     <script>
     $(function(){
         $('#datetimeInputTng').combodate({
