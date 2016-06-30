@@ -45,9 +45,9 @@
         <h3>
 <a id="calendar-date-to-tng-stardate" class="anchor" href="#calendar-date-to-tng-stardate" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Calendar date to TNG Stardate</h3>
 
-<form name="computeTngStardate">
+<form name="getTngStardate">
     <input id="datetimeInputTng" name="datetime" type="text">
-	<input type="button" value="Compute" onClick="alert(calendarDateToStardateTng(2409, 0, 1, 0, 0))">
+	<input id="computeTNGStardate" type="button" value="Compute">
 	<input name="stardateOut" type="text">
     <script>
     $(function(){
@@ -62,6 +62,9 @@
 			smartDays: true
 		});  
     });
+	$('#computeTNGStardate').click(function() {
+		alert(calendarDateToStardateTng(2409, 0, 1, 0, 0));
+	});
     </script>
 </form>
 
