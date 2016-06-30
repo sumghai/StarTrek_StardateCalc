@@ -7,6 +7,16 @@
     <meta name="description" content="Star Trek Stardate Calculator : Web-based HTML &amp; JavaScript tool for converting between calendar dates and Star Trek Stardates, based on Phillip L. Sublett&#39;s formulae from TrekGuide.com. Currently supports TNG stardates.">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+	
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<link rel="stylesheet" href="/resources/demos/style.css">
+	<script>
+		$(function() {
+			$( "#datepicker" ).datepicker({ minDate: -20, maxDate: "+1M +10D" });
+		});
+	</script>
 
     <title>Star Trek Stardate Calculator</title>
   </head>
@@ -31,7 +41,11 @@
         <h3>
 <a id="calendar-date-to-tng-stardate" class="anchor" href="#calendar-date-to-tng-stardate" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Calendar date to TNG Stardate</h3>
 
-<p>coming soon</p>
+<form name="computeTngStardate">
+
+<p>Date: <input type="text" id="datepicker"></p>
+
+</form>
 
         <h3>
 <a id="tng-stardate-to-calendar-date" class="anchor" href="#tng-stardate-to-calendar-date" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>TNG Stardate to Calendar date</h3>
