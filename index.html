@@ -43,10 +43,14 @@
 <a id="calendar-date-to-tng-stardate" class="anchor" href="#calendar-date-to-tng-stardate" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Calendar date to TNG Stardate</h3>
 
 <form name="computeTngStardate">
-    <input id="datetime24" data-format="DD-MM-YYYY HH:mm" data-template="DD / MM / YYYY     HH : mm" name="datetime" value="21-12-2012 20:30" type="text">
+    <input id="datetime24" data-format="DD-MM-YYYY HH:mm" data-template="DD / MM / YYYY     HH : mm" name="datetime" value="01-01-2319 00:00" type="text">
     <script>
     $(function(){
-        $('#datetime24').combodate();  
+        $('#datetime24').combodate({
+			minYear: 2319,
+			maxYear: 2430,
+			minuteStep: 1
+		});  
     });
     </script>
 </form>
