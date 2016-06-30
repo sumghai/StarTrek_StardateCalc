@@ -47,8 +47,8 @@
 
 <form name="getTngStardate">
     <input id="datetimeInputTng" name="datetime" type="text">
-	<input id="computeTNGStardate" type="button" value="Compute">
-	<input name="stardateOut" type="text">
+	<input id="computeTngStardate" type="button" value="Compute">
+	<input id="tngStardateOutput" type="text" readonly="true">
     <script>
     $(function(){
         $('#datetimeInputTng').combodate({
@@ -62,8 +62,8 @@
 			smartDays: true
 		});  
     });
-	$('#computeTNGStardate').click(function() {
-		alert(calendarDateToStardateTng(2409, 0, 1, 0, 0));
+	$('#computeTngStardate').click(function() {
+		$('#tngStardateOutput').val(calendarDateToStardateTng(2409, 0, 1, 0, 0));
 	});
     </script>
 </form>
