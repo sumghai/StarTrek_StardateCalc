@@ -8,20 +8,9 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 	
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-	<link rel="stylesheet" href="/resources/demos/style.css">
-	<script>
-		$(function() {
-			$( "#datepicker" ).datepicker({ 
-				changeMonth: true,
-				changeYear: true,
-				minDate: new Date(2319, 1 - 1, 1), 
-				maxDate: new Date(2430, 12 - 1, 31) 
-			});
-		});
-	</script>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://vitalets.github.io/combodate/momentjs/moment.min.2.5.0.js"></script> 
+    <script src="http://vitalets.github.io/combodate/combodate.js"></script> 
 
     <title>Star Trek Stardate Calculator</title>
   </head>
@@ -47,7 +36,12 @@
 <a id="calendar-date-to-tng-stardate" class="anchor" href="#calendar-date-to-tng-stardate" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Calendar date to TNG Stardate</h3>
 
 <form name="computeTngStardate">
-Date: <input type="text" id="datepicker">
+    <input id="datetime24" data-format="DD-MM-YYYY HH:mm" data-template="DD / MM / YYYY     HH : mm" name="datetime" value="1-1-2319 00:00" type="text">
+    <script>
+    $(function(){
+        $('#datetime24').combodate();  
+    });
+    </script>
 </form>
 
         <h3>
