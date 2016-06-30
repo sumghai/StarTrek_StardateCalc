@@ -14,7 +14,12 @@
 	<link rel="stylesheet" href="/resources/demos/style.css">
 	<script>
 		$(function() {
-			$( "#datepicker" ).datepicker({ minDate: new Date(2319, 1 - 1, 1), maxDate: new Date(2430, 12 - 1, 31) });
+			$( "#datepicker" ).datepicker({ 
+				changeMonth: true,
+				changeYear: true
+				minDate: new Date(2319, 1 - 1, 1), 
+				maxDate: new Date(2430, 12 - 1, 31) 
+			});
 		});
 	</script>
 
