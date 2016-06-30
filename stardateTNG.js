@@ -21,7 +21,7 @@ function calendarDateToStardateTng( year, month, day, hour, minute )
 	hourInput = parseInt( hour );
 	minuteInput = parseInt( minute );
 	
-	var stardateOrigin = new Date( "May 25, 2322 00:00:00" );
+	var stardateOrigin = new Date( "July 5, 2318 12:00:00" );
 	var stardateInput = new Date();
 	
 	stardateInput.setYear( yearInput );
@@ -49,7 +49,7 @@ function calendarDateToStardateTng( year, month, day, hour, minute )
  */
 function stardateTngToCalendarDate( stardate )
 {
-	var stardateOrigin = new Date("May 25, 2322 00:00:00");
+	var stardateOrigin = new Date( "July 5, 2318 12:00:00" );
 	
 	var stardateIn = eval( stardate );
 	
