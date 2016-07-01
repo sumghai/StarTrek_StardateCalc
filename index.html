@@ -63,9 +63,8 @@
 		});  
     });
 	$('#computeTngStardate').click(function() {
-		$('#tngStardateOutput').val(calendarDateToStardateTng(
-			$('#datetimeInputTng').val()
-		);
+		var dummy = $('#datetimeInputTng').val());
+		$('#tngStardateOutput').val(calendarDateToStardateTng(dummy));
 	});
     </script>
 </form>
