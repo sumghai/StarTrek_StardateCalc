@@ -65,7 +65,16 @@
 		});  
     });
 	$('#datetimeInputTng').change(function() {
-		$('#tngStardateOutput').val(calendarDateToStardateTng($('#datetimeInputTng').val()));
+		var returnedStardate = calendarDateToStardateTng( $('#datetimeInputTng').val() );
+		
+		if ( !$.isNumeric(returnedStardate) ) {
+			returnedStardate = "Invalid date entry";
+		}
+		
+		$('#tngStardateOutput').val( returnedStardate );
+		
+	
+		
 	});
 	
     </script>
