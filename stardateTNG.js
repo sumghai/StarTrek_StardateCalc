@@ -33,13 +33,13 @@ function calendarDateToStardateTng( calendarDateInput )
  * @param {Number} stardate
  * @return {string} calendarDateOut
  */
-function stardateTngToCalendarDate( stardate )
+function stardateTngToCalendarDate( stardateInput )
 {
 	var stardateOrigin = new Date( "July 5, 2318 12:00:00" );
 	
-	var stardateIn = eval( stardate );
+	var stardateIn = eval( stardateInput );
 	
-	var dateOut = stardateIn * 60 * 60 * 24 * 365.2422 ;
+	var dateOut = stardateIn * 34367056.4;
 	
 	var resultMilliseconds = stardateOrigin.getTime() + dateOut;
 	
