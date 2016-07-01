@@ -52,7 +52,7 @@
 	
 	 is Stardate 
 	
-	<input id="tngStardateOutput" type="text" readonly="true">
+	<input id="tngStardateOutput" type="text" readonly="true" value="06-04-2378 06:08">
     <script>
     $(function(){
         $('#datetimeInputTng').combodate({
@@ -73,10 +73,7 @@
 		}
 		
 		$('#tngStardateOutput').val( returnedStardate );	
-	});
-	$(function(){
-		$('#tngStardateOutput').val( calendarDateToStardateTng( $('#datetimeInputTng').val() ) );
-	});
+	}).trigger("change");
 	
     </script>
 </form>
