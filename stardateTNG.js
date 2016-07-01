@@ -37,11 +37,9 @@ function stardateTngToCalendarDate( stardateInput )
 {
 	var stardateOrigin = new Date( "July 5, 2318 12:00:00" );
 	
-	var stardateIn = eval( stardateInput );
+	var millisecondsSinceStardateOrigin = stardateInput * 34367056.4;
 	
-	var dateOut = stardateIn * 34367056.4;
-	
-	var resultMilliseconds = stardateOrigin.getTime() + dateOut;
+	var resultMilliseconds = stardateOrigin.getTime() + millisecondsSinceStardateOrigin;
 	
 	var resultDate = new Date();
 	
