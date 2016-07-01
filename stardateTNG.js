@@ -45,10 +45,14 @@ function stardateTngToCalendarDate( stardateInput )
 	
 	resultDate.setTime( resultMilliseconds );
 	
+	var weekdayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+	
+	var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Oct", "Nov", "Dec"];
+	
 	var calendarOutput = 
-		resultDate.getDay() + " " + 
-		resultDate.getDate() + " " +
-		resultDate.getMonth() + " " +
+		weekdayNames[resultDate.getDay()] + " " + 
+		('0' + resultDate.getDate()).slice(-2) + " " +
+		monthNames[resultDate.getMonth()] + " " +
 		resultDate.getFullYear() + " " +
 		resultDate.getHours() + ":" +
 		resultDate.getMinutes() + ":" +
