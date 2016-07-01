@@ -13,22 +13,11 @@
  * @param {Number} minute
  * @return {Number} stardateOut
  */
-function calendarDateToStardateTng( year, month, day, hour, minute )
+function calendarDateToStardateTng( calendarDateInput )
 {
-	yearInput = parseInt( year );
-	monthInput = parseInt( month );
-	dayInput = parseInt( day );
-	hourInput = parseInt( hour );
-	minuteInput = parseInt( minute );
-	
 	var stardateOrigin = new Date( "July 5, 2318 12:00:00" );
-	var calendarInput = new Date();
-	
-	calendarInput.setYear( yearInput );
-	calendarInput.setMonth( monthInput );
-	calendarInput.setDate( dayInput );
-	calendarInput.setHours( hourInput );
-	calendarInput.setMinutes( minuteInput );
+	var calendarInput = new Date( calendarDateInput );
+
 	calendarInput.setSeconds( 0 );
 	calendarInput.toGMTString( 0 );
 	
