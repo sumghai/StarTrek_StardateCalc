@@ -65,6 +65,11 @@
 	$('#computeTngStardate').click(function() {
 		$('#tngStardateOutput').val(calendarDateToStardateTng($('#datetimeInputTng').val()));
 	});
+	
+	$('#datetimeInputTng').change(function() {
+		$('#tngStardateOutput').val(calendarDateToStardateTng($('#datetimeInputTng').val()));
+	});
+	
     </script>
 </form>
 
