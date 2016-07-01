@@ -43,5 +43,5 @@ function stardateTngToCalendarDate( stardateInput )
 	
 	var resultDate = new Date();
 	
-	return resultDate.setTime( resultMilliseconds );
+	return resultDate.setTime( resultMilliseconds ).toLocaleString();
 }
