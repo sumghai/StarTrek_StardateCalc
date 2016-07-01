@@ -99,7 +99,7 @@
 	<div id="invalidTngStardate" class="formInputError"></div>
 	
     <script>
-	$('#tngStardateInput').change(function() {
+	$('#tngStardateInput').on('change keyup paste mouseup', function() {
 		var output;
 	
 		var stardateInput = $('#tngStardateInput').val();
