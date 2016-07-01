@@ -52,8 +52,8 @@
     <script>
     $(function(){
         $('#datetimeInputTng').combodate({
-			format: "YYYY-MM-DD HH:mm",
-			template: "YYYY / MM / DD     HH : mm",
+			format: "MMM DD, YYYY HH:mm",
+			template: "YYYY / MMM / DD     HH : mm",
 			firstItem: 'name',
 			minYear: 2319,
 			maxYear: 2430,
@@ -63,6 +63,7 @@
 		});  
     });
 	$('#computeTngStardate').click(function() {
+		alert("Input is " + $('#datetimeInputTng').val());
 		$('#tngStardateOutput').val(calendarDateToStardateTng(2409, 6, 18, 09, 20));
 	});
     </script>
