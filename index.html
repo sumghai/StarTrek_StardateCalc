@@ -73,7 +73,7 @@
 		}
 		
 		$('#tngStardateOutput').val( returnedStardate );	
-	});
+	}).trigger('change');
 	
     </script>
 </form>
@@ -90,7 +90,7 @@
     <script>
 	$('#tngStardateInput').change(function() {
 		$('#tngCalendarDateOutput').val(stardateTngToCalendarDate($('#tngStardateInput').val()));
-	});
+	}).trigger('change');
     </script>
 </form>
 
