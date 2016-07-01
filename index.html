@@ -75,9 +75,9 @@
 		
 		if ( !$.isNumeric(returnedStardate) ) {
 			returnedStardate = "";
-			$("invalidTngCalendarDate").text("Invalid date - please check your selection");
+			$("#invalidTngCalendarDate").text("Invalid date - please check your selection");
 		} else {
-			$("invalidTngCalendarDate").text("");
+			$("#invalidTngCalendarDate").text("");
 		}
 		
 		$('#tngStardateOutput').val( returnedStardate );	
