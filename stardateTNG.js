@@ -25,7 +25,7 @@ function calendarDateToStardateTng( calendarDateInput )
 
 	stardateOut = millisecondsSinceStardateOrigin / 34367056.4;
 		
-	return stardateOut;
+	return stardateOut.toFixed(1);
 }
 
 /**
