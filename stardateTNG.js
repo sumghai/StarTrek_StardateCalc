@@ -22,22 +22,19 @@ function calendarDateToStardateTng( year, month, day, hour, minute )
 	minuteInput = parseInt( minute );
 	
 	var stardateOrigin = new Date( "July 5, 2318 12:00:00" );
-	var stardateInput = new Date();
+	var calendarInput = new Date();
 	
-	stardateInput.setYear( yearInput );
-	stardateInput.setMonth( monthInput );
-	stardateInput.setDate( dayInput );
-	stardateInput.setHours( hourInput );
-	stardateInput.setMinutes( minuteInput );
-	stardateInput.setSeconds( 0 );
-	stardateInput.toGMTString( 0 );
+	calendarInput.setYear( yearInput );
+	calendarInput.setMonth( monthInput );
+	calendarInput.setDate( dayInput );
+	calendarInput.setHours( hourInput );
+	calendarInput.setMinutes( minuteInput );
+	calendarInput.setSeconds( 0 );
+	calendarInput.toGMTString( 0 );
 	
-	var findMilliseconds = stardateInput.getTime() - stardateOrigin.getTime();
-	
-	var findStarYear = findMilliseconds / ( 60 * 60 * 24 * 365.2422 );
-	
-	findStarYear = Math.floor( findStarYear * 100 );
-	stardateOut = findStarYear / 100;
+	var millisecondsSinceStardateOrigin = calendarInput.getTime() - stardateOrigin.getTime();
+
+	stardateOut = millisecondsSinceStardateOrigin / 34367056.4;
 		
 	return stardateOut;
 }
