@@ -83,12 +83,14 @@
 <a id="tng-stardate-to-calendar-date" class="anchor" href="#tng-stardate-to-calendar-date" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>TNG Stardate to Calendar date</h3>
 
 <form name="getTngCalendarDate">
-    <input id="tngStardateInputTng" name="datetime2" type="text">
-	<input id="computeTngCalendarDate" type="button" value="Compute">
+    <input id="tngStardateInput" name="datetime2" type="text">
+		
+	 is Calendar date 
+	
 	<input id="tngCalendarDateOutput" type="text" readonly="true">
     <script>
-	$('#computeTngCalendarDate').click(function() {
-		$('#tngCalendarDateOutput').val(stardateTngToCalendarDate($('#tngStardateInputTng').val()));
+	$('#tngStardateInput').change(function() {
+		$('#tngCalendarDateOutput').val(stardateTngToCalendarDate($('#tngStardateInput').val()));
 	});
     </script>
 </form>
