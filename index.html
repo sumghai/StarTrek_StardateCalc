@@ -109,9 +109,11 @@
 		if ( !stardateFormat.test(stardateInput) ) {
 			output = "";
 			$("#invalidTngStardate").text("Invalid TNG stardate - correct format is at least one digit (0~9), optionally followed by a decimal point and only one digit (0~9)");
+			$('#tngStardateInput')css("border-color","red");
 		} else {
 			output = stardateTngToCalendarDate( stardateInput );
 			$("#invalidTngStardate").text("");
+			$('#tngStardateInput')css("border-color","initial");
 		}
 		
 		$('#tngCalendarDateOutput').val(output);
