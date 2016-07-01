@@ -47,22 +47,7 @@ function stardateTngToCalendarDate( stardateInput )
 	
 	resultDate.setTime( resultMilliseconds );
 	
-	var m_names = new Array(
-		"January",
-		"February",
-		"March",
-		"April",
-		"May",
-		"June",
-		"July",
-		"August",
-		"September",
-		"October",
-		"November",
-		"December"
-	);
-	
-	var calendarDateOut = m_names[resultDate.getMonth()] + " " + resultDate.getDate() + ", " + resultDate.getFullYear();
+	var calendarDateOut = resultDate.getMonth().toLocaleString();
 	
 	return calendarDateOut;
 }
