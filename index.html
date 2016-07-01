@@ -22,6 +22,43 @@
 	<!-- stardate calculators-->
 	<script src="https://raw.githubusercontent.com/sumghai/StarTrek_StardateCalc/master/stardateTNG.js"></script> 
 	
+	<script>
+    $(function(){
+        $('#datetimeTngInput').combodate({
+			format: "MMM DD, YYYY HH:mm",
+			template: "DD MMM YYYY @ HH mm",
+			firstItem: 'none',
+			minYear: 2319,
+			maxYear: 2430,
+			yearDescending: false,
+			minuteStep: 1,
+		});  
+    });
+	
+	$('#datetimeTngInput').change(function() {
+		var returnedStardate = calendarDateToStardateTng( $('#datetimeTngInput').val() );
+		
+		if ( !$.isNumeric(returnedStardate) ) {
+			returnedStardate = "Invalid date entry";
+		}
+		
+		$('#tngStardateOutput').val( returnedStardate );	
+	});
+	
+	$('#tngStardateInput').change(function() {
+		$('#tngCalendarDateOutput').val(stardateTngToCalendarDate($('#tngStardateInput').val()));
+	});
+    
+	
+	
+	
+	$(function () {
+		$('#datetimeTngInput').change();
+		$('#tngStardateInput').change();
+	});
+	
+	</script>
+	
 	
   </head>
 
@@ -48,51 +85,22 @@
 <a id="calendar-date-to-tng-stardate" class="anchor" href="#calendar-date-to-tng-stardate" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Calendar date to TNG Stardate</h3>
 
 <form name="getTngStardate">
-    <input id="datetimeInputTng" name="datetime" type="text">
+    <input id="datetimeTngInput" name="datetime" type="text">
 	
 	 is Stardate 
 	
 	<input id="tngStardateOutput" type="text" readonly="true">
-    <script>
-    $(function(){
-        $('#datetimeInputTng').combodate({
-			format: "MMM DD, YYYY HH:mm",
-			template: "DD MMM YYYY @ HH mm",
-			firstItem: 'none',
-			minYear: 2319,
-			maxYear: 2430,
-			yearDescending: false,
-			minuteStep: 1,
-			smartDays: true
-		});  
-    });
-	$('#datetimeInputTng').change(function() {
-		var returnedStardate = calendarDateToStardateTng( $('#datetimeInputTng').val() );
-		
-		if ( !$.isNumeric(returnedStardate) ) {
-			returnedStardate = "Invalid date entry";
-		}
-		
-		$('#tngStardateOutput').val( returnedStardate );	
-	});
-	
-    </script>
 </form>
 
         <h3>
 <a id="tng-stardate-to-calendar-date" class="anchor" href="#tng-stardate-to-calendar-date" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>TNG Stardate to Calendar date</h3>
 
 <form name="getTngCalendarDate">
-    <input id="tngStardateInput" name="datetime2" type="text">
+    <input id="tngStardateInput" name="datetime2" type="text" value="54868.6">
 		
 	 is Calendar date 
 	
 	<input id="tngCalendarDateOutput" type="text" readonly="true">
-    <script>
-	$('#tngStardateInput').change(function() {
-		$('#tngCalendarDateOutput').val(stardateTngToCalendarDate($('#tngStardateInput').val()));
-	});
-    </script>
 </form>
 
 <h3>
