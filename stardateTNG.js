@@ -45,5 +45,14 @@ function stardateTngToCalendarDate( stardateInput )
 	
 	resultDate.setTime( resultMilliseconds );
 	
-	return resultDate;
+	var calendarOutput = 
+		resultDate.getDay() + " " + 
+		resultDate.getDate() + " " +
+		resultDate.getMonth() + " " +
+		resultDate.getFullYear() + " " +
+		resultDate.getHours() + ":" +
+		resultDate.getMinutes() + ":" +
+		resultDate.getSeconds();
+	
+	return calendarOutput;
 }
