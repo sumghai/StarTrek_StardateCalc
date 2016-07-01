@@ -1,6 +1,11 @@
 /* Custom form element styles
  * Robin "sumghai" Chang
  */
+
+.formInputError {
+	font-color: red;
+	font-size: 10px;
+}
  
 label,
 input,
