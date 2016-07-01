@@ -54,6 +54,9 @@
 	 is Stardate 
 	
 	<input id="tngStardateOutput" type="text" readonly="true">
+	<br>
+	<div id="invalidTngCalendarDate"></div>
+	
     <script>
     $(function(){
         $('#datetimeTngInput').combodate({
@@ -71,7 +74,10 @@
 		var returnedStardate = calendarDateToStardateTng( $('#datetimeTngInput').val() );
 		
 		if ( !$.isNumeric(returnedStardate) ) {
-			returnedStardate = "Invalid date entry";
+			returnedStardate = "";
+			$("invalidTngCalendarDate").html("Invalid date - please check your selection");
+		} else {
+			$("invalidTngCalendarDate").html("");
 		}
 		
 		$('#tngStardateOutput').val( returnedStardate );	
