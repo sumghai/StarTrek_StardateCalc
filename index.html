@@ -74,6 +74,9 @@
 		
 		$('#tngStardateOutput').val( returnedStardate );	
 	});
+	$(function(){
+		$('#tngStardateOutput').val( calendarDateToStardateTng( $('#datetimeInputTng').val() ) );
+	});
 	
     </script>
 </form>
