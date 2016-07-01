@@ -54,7 +54,7 @@ function stardateTngToCalendarDate( stardateInput )
 		('0' + resultDate.getDate()).slice(-2) + " " +
 		monthNames[resultDate.getMonth()] + " " +
 		resultDate.getFullYear() + " @ " +
-		('0' + resultDate.getHours()).slice(-2) + " " +
+		('0' + resultDate.getHours()).slice(-2) + ":" +
 		resultDate.getMinutes() + ":" +
 		resultDate.getSeconds();
 	
