@@ -52,12 +52,13 @@
 	
 	 is Stardate 
 	
-	<input id="tngStardateOutput" type="text" readonly="true" value="06-04-2378 06:08">
+	<input id="tngStardateOutput" type="text" readonly="true">
     <script>
     $(function(){
         $('#datetimeInputTng').combodate({
 			format: "MMM DD, YYYY HH:mm",
 			template: "DD MMM YYYY @ HH mm",
+			value: "April 06, 2378 06:08"
 			firstItem: 'none',
 			minYear: 2319,
 			maxYear: 2430,
