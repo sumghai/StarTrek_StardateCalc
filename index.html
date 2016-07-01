@@ -95,9 +95,26 @@
 	 is Calendar date 
 	
 	<input id="tngCalendarDateOutput" type="text" readonly="true">
+	<br>
+	<div id="invalidTngStardate" class="formInputError"></div>
+	
     <script>
 	$('#tngStardateInput').change(function() {
-		$('#tngCalendarDateOutput').val(stardateTngToCalendarDate($('#tngStardateInput').val()));
+		var output;
+	
+		var stardateInput = $('#tngStardateInput').val();
+	
+		var stardateFormat = new RegExp('^[0-9]*.[0-9]$');
+		
+		if ( !stardateFormat.test(stardateInput) ) {
+			output = "";
+			$("#invalidTngStardate").text("Invalid TNG stardate - correct format is ");
+		} else {
+			output = stardateTngToCalendarDate( stardateInput );
+			$("#invalidTngStardate").text("");
+		}
+		
+		$('#tngCalendarDateOutput').val(output);
 	}).trigger("change");
     </script>
 </form>
